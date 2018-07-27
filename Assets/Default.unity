@@ -313,23 +313,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &724267629 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1753493420424610, guid: f4a355ed2ac023748a03352d6f6d9ad2,
-    type: 2}
-  m_PrefabInternal: {fileID: 1953861233}
---- !u!135 &724267630
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 724267629}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &788363040
 GameObject:
   m_ObjectHideFlags: 0

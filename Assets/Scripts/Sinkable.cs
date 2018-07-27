@@ -6,6 +6,8 @@ public class Sinkable : MonoBehaviour {
 
     Rigidbody rb;
 
+    public int health;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -18,6 +20,15 @@ public class Sinkable : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        rb.isKinematic = false;
+
+        health -= 5;
+        Debug.Log("current HP: " + health.ToString());
+
+        if (health <= 0)
+        {
+            rb.isKinematic = false;
+        }
+
+
     }
 }

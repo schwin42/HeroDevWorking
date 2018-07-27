@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114113960293173884}
   - component: {fileID: 114851426022150098}
   - component: {fileID: 114718052116578706}
+  - component: {fileID: 135821025412373350}
   m_Layer: 0
   m_Name: ThrowableBall
   m_TagString: Untagged
@@ -266,6 +267,18 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
+--- !u!135 &135821025412373350
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1753493420424610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135873316824221972
 SphereCollider:
   m_ObjectHideFlags: 1

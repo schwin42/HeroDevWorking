@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4293208679768864}
+  - component: {fileID: 114664805634604194}
   m_Layer: 26
   m_Name: Slingshot
   m_TagString: Untagged
@@ -260,6 +261,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900875902718552}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114664805634604194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1737052849087044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbff22adfd4cadd4b97964c2c81f7f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136583217080651012
 CapsuleCollider:
   m_ObjectHideFlags: 1

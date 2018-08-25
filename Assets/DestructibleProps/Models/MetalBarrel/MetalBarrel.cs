@@ -28,9 +28,10 @@ public class MetalBarrel : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision other){
-		if(other.gameObject.GetComponent<BulletsDamage>()){
-		Health -= other.gameObject.GetComponent<BulletsDamage>().Damage;
-			if(Health <= 0 && !FireFX.activeInHierarchy){
+        Debug.Log("other: " + other.ToString());
+        if (other.gameObject.tag == "Projectile"){
+            Debug.Log("projectile: " + other.ToString());
+            if (!FireFX.activeInHierarchy){
 				FireFX.SetActive(true);
 				Invoke("Crushing", BurningTime);
 			}

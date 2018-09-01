@@ -15,21 +15,26 @@ namespace VoxelMax
         // Update is called once per frame
         void Update()
         {
-            this.gameObject.transform.position +=this.gameObject.transform.TransformDirection(Vector3.up) * speed * Time.deltaTime;
+            this.gameObject.transform.position += this.gameObject.transform.TransformDirection(Vector3.up) * speed * Time.deltaTime;
         }
 
         public void OnCollisionEnter(Collision collision)
         {
-        
-        }
-
-        public void OnTriggerEnter(Collider other)
-        {
+            Debug.Log("On collision enter");
             VoxelBomb bomb = this.gameObject.GetComponent<VoxelBomb>();
             if (bomb != null)
             {
                 bomb.triggered = true;
             }
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            //VoxelBomb bomb = this.gameObject.GetComponent<VoxelBomb>();
+            //if (bomb != null)
+            //{
+            //    bomb.triggered = true;
+            //}
         }
 
     }

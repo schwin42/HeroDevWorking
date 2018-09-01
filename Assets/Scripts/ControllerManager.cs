@@ -17,9 +17,6 @@ public class ControllerManager : MonoBehaviour {
     //State
     bool isAiming = false;
     Rigidbody aimingProjectile = null;
-
-    //Debug
-    private Vector3 _attackVector;
     
 	// Use this for initialization
 	void Start () {
@@ -27,7 +24,19 @@ public class ControllerManager : MonoBehaviour {
         // trackedController.TriggerClicked += OnTriggerClicked;
         
         device = SteamVR_Controller.Input((int)trackedController.controllerIndex);
-        int otherDeviceId = trackedController.controllerIndex == 3 ? 4 : 3; //TODO Find less brittle way to determine controller indeces
+        if(VrInputManager.devices.Length != 2)
+        {
+            Debug.LogError("Unexpected number of devices: " + VrInputManager.devices.Length);
+            return;
+        }
+        int otherDeviceId = -1;
+        for(int i = 0; i < VrInputManager.devices.Length; i++)
+        {
+            if(VrInputManager.devices[i].controllerIndex != device.index)
+            {
+                otherDeviceId = (int)VrInputManager.devices[i].controllerIndex;
+            }
+        }
         otherDevice = SteamVR_Controller.Input(otherDeviceId);
 
         Debug.Log("device: " + device.index);
@@ -41,7 +50,6 @@ public class ControllerManager : MonoBehaviour {
         if(isAiming)
         {
             device.TriggerHapticPulse((ushort)(hapticFloor + (hapticVariance * GetAttackVector().sqrMagnitude)));
-            _attackVector = GetAttackVector();
             if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
             {
                 FireProjectile();

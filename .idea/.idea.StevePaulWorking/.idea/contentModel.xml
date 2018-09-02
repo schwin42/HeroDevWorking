@@ -34,7 +34,6 @@
             <e p="ReflectiveIlluminationFresnel.shader" t="Include" />
           </e>
         </e>
-        <e p="Enemy.cs" t="Include" />
         <e p="modern" t="Include">
           <e p="materials" t="Include">
             <e p="glass.shader" t="Include" />
@@ -50,6 +49,7 @@
         <e p="Scripts" t="Include">
           <e p="ControllerManager.cs" t="Include" />
           <e p="CustomTrigger.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
           <e p="Model" t="Include">
             <e p="PlayerTool.cs" t="Include" />
           </e>
@@ -57,6 +57,7 @@
           <e p="Sinkable.cs" t="Include" />
           <e p="Slingshot.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
+          <e p="VoxelRotator.cs" t="Include" />
           <e p="VrPlayer.cs" t="Include" />
         </e>
         <e p="SteamVR" t="Include">
@@ -261,7 +262,6 @@
             <e p="VoxelPhysics.cs" t="Include" />
           </e>
         </e>
-        <e p="VoxelRotator.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />

@@ -20,27 +20,7 @@ public class ControllerManager : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-        trackedController = GetComponent<SteamVR_TrackedController>();
-        // trackedController.TriggerClicked += OnTriggerClicked;
-        
-        device = SteamVR_Controller.Input((int)trackedController.controllerIndex);
-        if(VrInputManager.devices.Length != 2)
-        {
-            Debug.LogError("Unexpected number of devices: " + VrInputManager.devices.Length);
-            return;
-        }
-        int otherDeviceId = -1;
-        for(int i = 0; i < VrInputManager.devices.Length; i++)
-        {
-            if(VrInputManager.devices[i].controllerIndex != device.index)
-            {
-                otherDeviceId = (int)VrInputManager.devices[i].controllerIndex;
-            }
-        }
-        otherDevice = SteamVR_Controller.Input(otherDeviceId);
 
-        Debug.Log("device: " + device.index);
-        Debug.Log("otherDevice: " + otherDevice.index);
 
 
     }
@@ -73,11 +53,6 @@ public class ControllerManager : MonoBehaviour {
         return attackVector;
 
     }
-
-    // void OnTriggerClicked(object sender, ClickedEventArgs e)
-    // {
-        //Debug.Log("Trigger clicked on " + trackedController.controllerIndex);
-    // }
 
     public void HandleTriggerStay(Collider collider)
     {

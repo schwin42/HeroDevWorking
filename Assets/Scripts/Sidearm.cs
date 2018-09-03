@@ -11,6 +11,7 @@ public class Sidearm : PlayerTool
 	private const float RANGE = 10f;
 	private const float BLAST_FORCE = 1000f;
 	private const ushort HAPTIC_FORCE = 10000;
+	private const float DAMAGE = 10f;
 	
 	private AudioSource audioSource;
 
@@ -28,12 +29,14 @@ public class Sidearm : PlayerTool
 		RaycastHit hit;
 		if (Physics.Raycast(bulletOrigin.position, bulletOrigin.forward, out hit, RANGE))
 		{
-			Debug.Log("hit");
-			Rigidbody rb = hit.collider.attachedRigidbody;
-			rb.isKinematic = false;
-			rb.AddForce(bulletOrigin.forward * BLAST_FORCE);
-			rb.AddTorque(new Vector3(Random.value, Random.value, Random.value) * BLAST_FORCE);
-		}
+			if (hit.collider.tag != "Enemy")
+			{
+				Debug.Log("hit non-enemy: " + hit.collider.gameObject.name);
+				return;
+			}
+			Debug.Log("hit enemy: " + hit.collider.gameObject.name);
+			VoxelRotator voxel = hit.collider.GetComponent<VoxelRotator>();
+			voxel.TakeDamage(DAMAGE, bulletOrigin, BLAST_FORCE);}
 		else
 		{
 			Debug.Log("miss");

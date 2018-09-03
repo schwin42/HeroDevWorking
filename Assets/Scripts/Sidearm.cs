@@ -8,7 +8,7 @@ public class Sidearm : PlayerTool
 
 	[SerializeField] private Transform bulletOrigin;
 
-	private const float RANGE = 10f;
+	private const float RANGE = 20f;
 	private const float BLAST_FORCE = 1000f;
 	private const ushort HAPTIC_FORCE = 10000;
 	private const float DAMAGE = 10f;
@@ -35,7 +35,7 @@ public class Sidearm : PlayerTool
 				return;
 			}
 			Debug.Log("hit enemy: " + hit.collider.gameObject.name);
-			VoxelRotator voxel = hit.collider.GetComponent<VoxelRotator>();
+			VoxelManager voxel = hit.collider.GetComponent<VoxelManager>();
 			voxel.TakeDamage(DAMAGE, bulletOrigin, BLAST_FORCE);}
 		else
 		{

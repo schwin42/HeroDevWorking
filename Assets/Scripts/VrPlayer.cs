@@ -12,38 +12,65 @@ using UnityEngine;
 
 public class VrPlayer : MonoBehaviour
 {
+	//Character config
+	public int maxHealth = 10;
+	
+	//Prefab config
 	[SerializeField]
 	public PlayerTool[] toolPrefabs;
 
 	//State
+	private float currentHealth;
 	public SteamVR_TrackedController[] controllers;
 	List<List<PlayerTool>> toolsetsByIndex;
 	int activeToolsetIndex = 0;
 
+	//Bookkeeping
+	public static HeadManager Head {
+		get {
+			return _head;
+		}
+	}
+	private static HeadManager _head;
+	
 	// Use this for initialization
 	void Start()
 	{
 		StartCoroutine(DelayedStart());
 	}
 
-	void Initialize()
+	public void TakeDamage(Projectile projectile)
+	{
+		currentHealth -= projectile.damage;
+		Debug.Log("Player took " + projectile.damage + ". " + currentHealth + " remaining.");
+		//TODO If health is less than zero, die or something?
+	}
+	
+	private void Initialize()
 	{
 		InitializePlayerTools();
 
+		//Input init
+		_head = GetComponentInChildren<HeadManager>();
+		_head.Initialize(this);
+		
 		for (int i = 0; i < controllers.Length; i++)
 		{
 			controllers[i].PadClicked += OnPadClicked;
 		}
+		
+		//Character init
+		currentHealth = maxHealth;
 	}
 
-	IEnumerator DelayedStart()
+	private IEnumerator DelayedStart()
 	{
 		//HACK Wait until SteamVR_Controllers have completely initialized
 		yield return new WaitForSeconds(0.1f);
 		Initialize();
 	}
 	
-	void InitializePlayerTools() {
+	private void InitializePlayerTools() {
 		//Create tools
 		toolsetsByIndex = new List<List<PlayerTool>>();
 		for (int i = 0; i < toolPrefabs.Length; i++)

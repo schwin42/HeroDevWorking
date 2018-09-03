@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65496526720949442}
   - component: {fileID: 114892614531056220}
   - component: {fileID: 54440595881996988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4848342802548426}
   - component: {fileID: 108502171712589716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 65716059170414850}
   - component: {fileID: 114419122284751990}
   - component: {fileID: 54238803980233290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -76,7 +76,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4027937168099238}
   - component: {fileID: 114747538465073594}
-  m_Layer: 0
+  - component: {fileID: 82152483354770120}
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -96,7 +97,7 @@ GameObject:
   - component: {fileID: 65324034425375886}
   - component: {fileID: 114660845471521116}
   - component: {fileID: 54920886960483624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -116,7 +117,7 @@ GameObject:
   - component: {fileID: 65093341097081756}
   - component: {fileID: 114812993909726742}
   - component: {fileID: 54488943756576124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -136,7 +137,7 @@ GameObject:
   - component: {fileID: 65843059264944862}
   - component: {fileID: 114115733973615530}
   - component: {fileID: 54737726264763624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -156,7 +157,7 @@ GameObject:
   - component: {fileID: 65718289187931872}
   - component: {fileID: 114293889308073708}
   - component: {fileID: 54654034321186696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -173,7 +174,7 @@ GameObject:
   - component: {fileID: 4273159291762052}
   - component: {fileID: 198415152695838330}
   - component: {fileID: 199787769303304774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +194,7 @@ GameObject:
   - component: {fileID: 65961149836612228}
   - component: {fileID: 114146737864077026}
   - component: {fileID: 54158445507082218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -213,7 +214,7 @@ GameObject:
   - component: {fileID: 65532724390627836}
   - component: {fileID: 114600370563828010}
   - component: {fileID: 54977314800648028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Game Object_Separeted_Voxel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -227,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268832779505152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.573, y: 0.537, z: -0.425}
+  m_LocalPosition: {x: 0.572, y: 0.084, z: -0.425}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4893579364243272}
@@ -925,6 +926,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82152483354770120
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268832779505152}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1a83dc7925b81dd4ab7a8107013f83bc, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!108 &108502171712589716
 Light:
   m_ObjectHideFlags: 1
@@ -936,7 +1032,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 16.05
-  m_Range: 0.2
+  m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1045,7 +1141,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7692753e23f274243b0aebed49a5d15c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10
+  movementSpeed: 10
+  chargeTime: 2
+  shotDamage: 1
+  maxHealth: 10
+  firingRange: 2
+  pulseVelocity: 1
+  _projectilePrefab: {fileID: 54099494007178876, guid: 8e9857fe8be82354f84860811008c35b,
+    type: 2}
+  enableMovement: 0
   explosion: {fileID: 198415152695838330}
 --- !u!114 &114812993909726742
 MonoBehaviour:

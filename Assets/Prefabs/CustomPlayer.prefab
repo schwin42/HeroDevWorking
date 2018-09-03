@@ -112,6 +112,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1074156866995248
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4291434905202710}
+  - component: {fileID: 65647165314674684}
+  - component: {fileID: 114200774272948302}
+  m_Layer: 0
+  m_Name: HeadHurtBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1080872772482884
 GameObject:
   m_ObjectHideFlags: 1
@@ -1382,7 +1399,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4291434905202710}
   m_Father: {fileID: 4630408673459132}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1505,6 +1523,19 @@ Transform:
   - {fileID: 4233841784461562}
   m_Father: {fileID: 4345752981519938}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4291434905202710
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074156866995248}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4170650039890436}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4300794624449702
 Transform:
@@ -3388,6 +3419,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65647165314674684
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074156866995248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.3, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &81169901271341828
 AudioListener:
   m_ObjectHideFlags: 1
@@ -3452,7 +3495,17 @@ MonoBehaviour:
   hapticFloor: 200
   hapticVariance: 100
   projectilePrefab: {fileID: 100000, guid: a58f5b23ee7db3242ad7177a34f66730, type: 2}
-  controllers: []
+--- !u!114 &114200774272948302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074156866995248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90f24fc1d85e3445996d551cc4682a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114287193873183168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3503,6 +3556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5296b78215a5ee346a012cf3b0ab8a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
   toolPrefabs:
   - {fileID: 114087149515058660, guid: af7fe9c8558501a458a970604aa30f45, type: 2}
   - {fileID: 114474724883539774, guid: 6ba9120776dc37a43a7d2904da3df6dd, type: 2}
@@ -3525,7 +3579,6 @@ MonoBehaviour:
   hapticVariance: 200
   projectilePrefab: {fileID: 54802394817572866, guid: de210f0444209584e87b79f160a27a74,
     type: 2}
-  controllers: []
 --- !u!114 &114718849283056640
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -279,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8bd17dbf38665342b8b82ce8b3dbc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserSightEnabled: 1
   bulletOrigin: {fileID: 4308966229954210}
 --- !u!120 &120180604326957506
 LineRenderer:
@@ -318,7 +317,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 10}
+  - {x: 0, y: 0, z: 20}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.0066010565

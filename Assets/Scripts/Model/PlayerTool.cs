@@ -16,6 +16,8 @@ public abstract class PlayerTool : MonoBehaviour
 
 		trackedController = transform.parent.GetComponent<SteamVR_TrackedController>();
 		trackedController.TriggerClicked += OnTriggerClicked;
+		trackedController.Gripped += OnGripped;
+		trackedController.Ungripped += OnUngripped;
         
 		device = SteamVR_Controller.Input((int)trackedController.controllerIndex);
 		if(controllers.Length != 2)
@@ -49,11 +51,10 @@ public abstract class PlayerTool : MonoBehaviour
 
 	}
 
-	protected virtual void OnTriggerClicked(object sender, ClickedEventArgs e)
-	{
-		//Override to do something. Otherwise, event will be ignored
-		return;
-	}
+	//Override to do something. Otherwise, event will be ignored
+	protected virtual void OnTriggerClicked(object sender, ClickedEventArgs e) { return; }
+	protected virtual void OnGripped(object sender, ClickedEventArgs e) { return; }
+	protected virtual void OnUngripped(object sender, ClickedEventArgs e) { return; }
 	
 	void Start () {
 		return; //To avoid race conditions, use Initialize instead	

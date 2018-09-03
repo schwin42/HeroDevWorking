@@ -35,6 +35,8 @@
           </e>
         </e>
         <e p="FloorGenerator.cs" t="Include" />
+        <e p="GravityGun.cs" t="Include" />
+        <e p="GravityGunInfluence.cs" t="Include" />
         <e p="modern" t="Include">
           <e p="materials" t="Include">
             <e p="glass.shader" t="Include" />

@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cffd491-270e-4937-8e18-ff98bd483dcf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StevePaulWorking/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StevePaulWorking/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StevePaulWorking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StevePaulWorking/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CustomPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CustomPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VoxelDungeon.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VoxelDungeon.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/PlayerTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/PlayerTool.cs" afterDir="false" />
-    </list>
+    <list default="true" id="6cffd491-270e-4937-8e18-ff98bd483dcf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +41,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/VrPlayer.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -69,62 +63,6 @@
                 <marker date="1535953970368" expanded="true" signature="2312:2365" ph="{...}" />
                 <marker date="1535953970368" expanded="true" signature="2395:2724" ph="{...}" />
                 <marker date="1535953970368" expanded="true" signature="2781:2899" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/FloorGenerator.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <marker date="1535961858038" expanded="true" signature="6:92" ph="..." />
-                <marker date="1535961858038" expanded="true" signature="137:1386" ph="{...}" />
-                <marker date="1535961858038" expanded="true" signature="324:1322" ph="{...}" />
-                <marker date="1535961858038" expanded="true" signature="883:1318" ph="{...}" />
-                <marker date="1535961858038" expanded="true" signature="930:1314" ph="{...}" />
-                <marker date="1535961858038" expanded="true" signature="1377:1384" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/GravityGun.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="41" column="60" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
-              <folding>
-                <marker date="1535965165207" expanded="false" signature="6:97" ph="..." />
-                <marker date="1535965165207" expanded="true" signature="135:943" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="368:375" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="430:483" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="452:480" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="554:584" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="657:688" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="712:861" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="777:855" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="900:909" ph="{...}" />
-                <marker date="1535965165207" expanded="true" signature="932:941" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/GravityGunInfluence.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-              <folding>
-                <marker date="1535964601431" expanded="false" signature="6:78" ph="..." />
-                <marker date="1535964601431" expanded="true" signature="128:513" ph="{...}" />
-                <marker date="1535964601431" expanded="true" signature="229:236" ph="{...}" />
-                <marker date="1535964601431" expanded="true" signature="291:298" ph="{...}" />
-                <marker date="1535964601431" expanded="true" signature="339:403" ph="{...}" />
-                <marker date="1535964601431" expanded="true" signature="444:511" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -352,14 +290,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VoxelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DestructibleProps/Models/CorridorLamp/CorridorLamp.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FloorGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamVR/Scripts/SteamVR_Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CustomTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GravityGunInfluence.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/VrPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/PlayerTool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamVR/Extras/SteamVR_TrackedController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GravityGun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ControllerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VoxelMax/Source/VoxelContainer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -396,7 +331,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="69" />
     <option name="y" value="138" />
     <option name="width" value="1400" />
@@ -480,12 +415,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535848336071</updated>
-      <workItem from="1535848338607" duration="31887000" />
+      <workItem from="1535848338607" duration="32281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31887000" />
+    <option name="totallyTimeSpent" value="32281000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -497,7 +432,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -1204,31 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/VrPlayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-          <folding>
-            <marker date="1535953970368" expanded="false" signature="6:78" ph="..." />
-            <marker date="1535953970368" expanded="true" signature="80:179" ph="/* public enum PlayerToolType ... */" />
-            <marker date="1535953970368" expanded="true" signature="218:2901" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="547:580" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="555:577" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="663:703" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="751:939" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="968:1247" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="1139:1193" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="1284:1415" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="1456:2249" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="1571:2175" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="1710:2171" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="2312:2365" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="2395:2724" ph="{...}" />
-            <marker date="1535953970368" expanded="true" signature="2781:2899" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/VRTK/Scripts/Interactions/Highlighters/VRTK_MaterialColorSwapHighlighter.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1347,14 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <marker date="1535961858038" expanded="true" signature="6:92" ph="..." />
-            <marker date="1535961858038" expanded="true" signature="137:1386" ph="{...}" />
-            <marker date="1535961858038" expanded="true" signature="324:1322" ph="{...}" />
-            <marker date="1535961858038" expanded="true" signature="883:1318" ph="{...}" />
-            <marker date="1535961858038" expanded="true" signature="930:1314" ph="{...}" />
-            <marker date="1535961858038" expanded="true" signature="1377:1384" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1398,33 +1300,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-          <folding>
-            <marker date="1535964601431" expanded="false" signature="6:78" ph="..." />
-            <marker date="1535964601431" expanded="true" signature="128:513" ph="{...}" />
-            <marker date="1535964601431" expanded="true" signature="229:236" ph="{...}" />
-            <marker date="1535964601431" expanded="true" signature="291:298" ph="{...}" />
-            <marker date="1535964601431" expanded="true" signature="339:403" ph="{...}" />
-            <marker date="1535964601431" expanded="true" signature="444:511" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/GravityGun.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="41" column="60" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/VrPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
           <folding>
-            <marker date="1535965165207" expanded="false" signature="6:97" ph="..." />
-            <marker date="1535965165207" expanded="true" signature="135:943" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="368:375" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="430:483" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="452:480" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="554:584" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="657:688" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="712:861" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="777:855" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="900:909" ph="{...}" />
-            <marker date="1535965165207" expanded="true" signature="932:941" ph="{...}" />
+            <marker date="1535953970368" expanded="false" signature="6:78" ph="..." />
+            <marker date="1535953970368" expanded="true" signature="80:179" ph="/* public enum PlayerToolType ... */" />
+            <marker date="1535953970368" expanded="true" signature="218:2901" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="547:580" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="555:577" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="663:703" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="751:939" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="968:1247" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="1139:1193" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="1284:1415" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="1456:2249" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="1571:2175" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="1710:2171" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="2312:2365" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="2395:2724" ph="{...}" />
+            <marker date="1535953970368" expanded="true" signature="2781:2899" ph="{...}" />
           </folding>
         </state>
       </provider>

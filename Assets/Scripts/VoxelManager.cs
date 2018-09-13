@@ -12,11 +12,11 @@ public class VoxelManager : MonoBehaviour
 	public Rigidbody Rigidbody;
 	
 	//State
-	private Enemy _owner;
+	public Enemy Owner { get; set; } //Owner here means the whole of which the voxel is a part
 
 	public void Initialize(Enemy owner)
 	{
-		_owner = owner;
+		Owner = owner;
 		Rigidbody = GetComponent<Rigidbody>();
 	}
 
@@ -37,7 +37,7 @@ public class VoxelManager : MonoBehaviour
 
 	public void TakeDamage(float damage, Transform damageOrigin, float blastForce)
 	{
-		_owner.TakeDamage(damage);
+		Owner.TakeDamage(damage);
 		
 		Rigidbody.isKinematic = false;
 		Rigidbody.AddForce(damageOrigin.forward * blastForce);

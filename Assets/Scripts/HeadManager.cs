@@ -21,11 +21,11 @@ public class HeadManager : MonoBehaviour
 		
 	}
 
-	private void OnTriggerEnter(Collider other)
+	private void OnCollisionEnter(Collision other)
 	{
-		if (other.CompareTag("Projectile"))
+		if (other.collider.CompareTag("Projectile"))
 		{
-			_player.TakeDamage(other.GetComponent<Projectile>());
+			_player.TakeDamage(other.collider.GetComponent<Projectile>());
 		}
 
 		Destroy(other.gameObject);

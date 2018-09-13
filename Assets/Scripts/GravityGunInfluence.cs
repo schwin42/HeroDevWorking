@@ -17,8 +17,11 @@ public class GravityGunInfluence : MonoBehaviour
 		
 	}
 
+	
+	
 	void OnTriggerEnter(Collider collider)
 	{
+		Debug.Log("hit collider: " + collider.name);
 		overlappingRigidbodies.Add(collider.attachedRigidbody);
 	}
 

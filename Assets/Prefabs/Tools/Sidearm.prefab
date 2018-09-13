@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4308966229954210}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BulletOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4512135484228392}
   - component: {fileID: 120180604326957506}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 4707361034359564}
   - component: {fileID: 23913098627315988}
   - component: {fileID: 33204591051030142}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Magunun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4945829009876810}
   - component: {fileID: 114087149515058660}
   - component: {fileID: 82163031604860236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sidearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1675384332948042}
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0.38268343, w: 0}
-  m_LocalPosition: {x: 0, y: -0.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children: []
   m_Father: {fileID: 4945829009876810}
@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1896189128607760}
   m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0.48558444, z: -0.014425173}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4707361034359564}

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Owner
 {
 	private enum AiMoveDirective
 	{
@@ -118,13 +118,15 @@ public class Enemy : MonoBehaviour
 		foreach (VoxelManager voxel in body)
 		{
 			voxel.Rigidbody.isKinematic = false;
-			voxel.transform.SetParent(null);
+			voxel.transform.SetParent(SceneManager.Instance.JunkContainer);
+			voxel.name = "EnemyChunk";
 			voxel.Rigidbody.AddExplosionForce(EXPLOSION_FORCE, transform.position, EXPLOSION_RADIUS);
+			voxel.Owner = null;
 		}
 
 		_isAlive = false;
 		_coreLight.gameObject.SetActive(false);
-		StartCoroutine(CleanUp());
+//		StartCoroutine(CleanUp());
 	}
 
 	private IEnumerator CleanUp()

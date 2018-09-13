@@ -34,9 +34,7 @@
             <e p="ReflectiveIlluminationFresnel.shader" t="Include" />
           </e>
         </e>
-        <e p="FloorGenerator.cs" t="Include" />
-        <e p="GravityGun.cs" t="Include" />
-        <e p="GravityGunInfluence.cs" t="Include" />
+        <e p="GravityGunSource.cs" t="Include" />
         <e p="modern" t="Include">
           <e p="materials" t="Include">
             <e p="glass.shader" t="Include" />
@@ -49,10 +47,15 @@
             </e>
           </e>
         </e>
+        <e p="Owner.cs" t="Include" />
+        <e p="SceneManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ControllerManager.cs" t="Include" />
           <e p="CustomTrigger.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="FloorGenerator.cs" t="Include" />
+          <e p="GravityGun.cs" t="Include" />
+          <e p="GravityGunInfluence.cs" t="Include" />
           <e p="HeadManager.cs" t="Include" />
           <e p="Model" t="Include">
             <e p="PlayerTool.cs" t="Include" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.iOS;
 
-public abstract class PlayerTool : MonoBehaviour
+public abstract class PlayerTool : Owner
 {
 
 	protected SteamVR_TrackedController trackedController;

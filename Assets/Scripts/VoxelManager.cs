@@ -12,13 +12,13 @@ public class VoxelManager : MonoBehaviour
 	public Rigidbody Rigidbody;
 	
 	//State
-	public Enemy Owner { get; set; } //Owner here means the whole of which the voxel is a part
+	public Owner owner { get; set; } //Owner here means the whole of which the voxel is a part
 	private bool _isInitialized = false;
 
 	public void Initialize(Enemy owner)
 	{
 		Rigidbody = GetComponent<Rigidbody>();
-		this.Owner = owner;
+		this.owner = owner;
 		_isInitialized = true;
 	}
 
@@ -45,9 +45,9 @@ public class VoxelManager : MonoBehaviour
 
 	public void TakeDamage(float damage, Transform damageOrigin, float blastForce)
 	{
-		if (this.Owner != null)
+		if (this.owner != null)
 		{
-			this.Owner.TakeDamage(damage);
+			this.owner.TakeDamage(damage);
 		}
 
 		
@@ -56,4 +56,10 @@ public class VoxelManager : MonoBehaviour
 		Rigidbody.AddTorque(new Vector3(Random.value, Random.value, Random.value) * blastForce);
 
 	}
+	
+	private void OnCollisionEnter(Collision hit)
+	{
+		 if (this.owner == null) return;
+		 this.owner.HandleConstituentCollisionEnter(hit);
+	 }
 }

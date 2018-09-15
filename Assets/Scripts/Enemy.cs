@@ -93,7 +93,7 @@ public class Enemy : Owner
 		}
 }
 
-	public void TakeDamage(float damage)
+	public override void TakeDamage(float damage)
 	{
 		currentHealth -= damage;
 		if (currentHealth <= 0f)
@@ -122,7 +122,7 @@ public class Enemy : Owner
 			voxel.transform.SetParent(SceneManager.Instance.junkContainer);
 			voxel.name = "EnemyChunk";
 			voxel.Rigidbody.AddExplosionForce(EXPLOSION_FORCE, transform.position, EXPLOSION_RADIUS);
-			voxel.Owner = null;
+			voxel.owner = null;
 		}
 
 		_isAlive = false;

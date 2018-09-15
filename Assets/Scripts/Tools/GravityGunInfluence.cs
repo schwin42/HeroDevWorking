@@ -35,12 +35,11 @@ public class GravityGunInfluence : MonoBehaviour
 
 	}
 	
-	private void OnTriggerEnter(Collider collider)
+	private void OnTriggerEnter(Collider other)
 	{
-		if (collider.gameObject.layer == SceneManager.Instance.geometryLayer) return;
-		
-		Debug.Log("hit collider: " + collider.name);
-		overlappingRigidbodies.Add(collider.attachedRigidbody);
+		if (other.gameObject.layer == SceneManager.Instance.geometryLayer) return;
+
+		overlappingRigidbodies.Add(other.attachedRigidbody);
 	}
 
 	void OnTriggerLeave(Collider collider)

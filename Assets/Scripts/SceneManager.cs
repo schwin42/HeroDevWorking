@@ -23,7 +23,10 @@ public class SceneManager : MonoBehaviour
 	private Transform _junkContainer;
 	
 	public int geometryLayer { get { return _geometryLayer; } }
-	private int _geometryLayer;
+	private int _geometryLayer = -1;
+	
+	public int playerToolLayer { get { return _playerToolLayer; } }
+	private int _playerToolLayer = -1;
 	
 	private void Awake()
 	{
@@ -39,6 +42,7 @@ public class SceneManager : MonoBehaviour
 		_instance._junkContainer.rotation = Quaternion.identity;
 
 		_instance._geometryLayer = LayerMask.NameToLayer("Geometry");
+		_instance._playerToolLayer = LayerMask.NameToLayer("PlayerTool");
 
 	}
 }

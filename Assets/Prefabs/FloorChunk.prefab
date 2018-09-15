@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23070166955256906}
   - component: {fileID: 65363351839472988}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: FloorChunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

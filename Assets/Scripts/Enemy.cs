@@ -34,7 +34,7 @@ public class Enemy : Owner
 	private const float DISPOSAL_TIME = 1.5f;
 	
 	//Prefab config
-	[SerializeField] private Rigidbody _projectilePrefab;
+	[SerializeField] private VoxelManager _projectilePrefab;
 	
 	//Status
 	private float currentHealth;
@@ -105,8 +105,9 @@ public class Enemy : Owner
 	private void FirePulse()
 	{
 		_audioSource.Play();
-		Rigidbody pulse = Instantiate(_projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-		pulse.velocity = (VrPlayer.Head.transform.position - transform.position) * pulseVelocity;
+		VoxelManager pulse = Instantiate(_projectilePrefab, transform.position, transform.rotation) as VoxelManager;
+		pulse.Initialize(this);
+		pulse.Rigidbody.velocity = (VrPlayer.Head.transform.position - transform.position) * pulseVelocity;
 	}
 	
 	private void Explode()
@@ -118,7 +119,7 @@ public class Enemy : Owner
 		foreach (VoxelManager voxel in body)
 		{
 			voxel.Rigidbody.isKinematic = false;
-			voxel.transform.SetParent(SceneManager.Instance.JunkContainer);
+			voxel.transform.SetParent(SceneManager.Instance.junkContainer);
 			voxel.name = "EnemyChunk";
 			voxel.Rigidbody.AddExplosionForce(EXPLOSION_FORCE, transform.position, EXPLOSION_RADIUS);
 			voxel.Owner = null;

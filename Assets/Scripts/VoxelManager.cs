@@ -13,14 +13,22 @@ public class VoxelManager : MonoBehaviour
 	
 	//State
 	public Enemy Owner { get; set; } //Owner here means the whole of which the voxel is a part
+	private bool _isInitialized = false;
 
 	public void Initialize(Enemy owner)
 	{
-		Owner = owner;
 		Rigidbody = GetComponent<Rigidbody>();
+		this.Owner = owner;
+		_isInitialized = true;
 	}
 
-	private void Start() { return; } //Use initializer instead
+	private void Start()
+	{
+		if (!_isInitialized)
+		{
+			Initialize(null);
+		}
+	}
 	
 	// Update is called once per frame
 	private void Update()
@@ -37,7 +45,11 @@ public class VoxelManager : MonoBehaviour
 
 	public void TakeDamage(float damage, Transform damageOrigin, float blastForce)
 	{
-		Owner.TakeDamage(damage);
+		if (this.Owner != null)
+		{
+			this.Owner.TakeDamage(damage);
+		}
+
 		
 		Rigidbody.isKinematic = false;
 		Rigidbody.AddForce(damageOrigin.forward * blastForce);

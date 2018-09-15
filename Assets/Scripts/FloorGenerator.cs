@@ -9,17 +9,13 @@ public class FloorGenerator : MonoBehaviour
 	[SerializeField] private GameObject _floorVoxel;
 
 	private SteamVR_PlayArea _playArea;
-
-	private int geometryLayer;
 	
 	//Debug
 	private Vector3[] _verts;
 	
 	// Use this for initialization
 	private void Start ()
-	{
-		geometryLayer = LayerMask.NameToLayer("Geometry");
-		
+	{		
 		_playArea = FindObjectOfType<SteamVR_PlayArea>();
 
 		_verts = _playArea.vertices;
@@ -41,7 +37,7 @@ public class FloorGenerator : MonoBehaviour
 					z * _floorVoxel.transform.localScale.z - zExtent / 2), 
 					Quaternion.identity) as GameObject;
 				voxel.transform.SetParent(transform);
-				voxel.layer = geometryLayer;
+				voxel.layer = SceneManager.Instance.geometryLayer;
 			}
 		}
 

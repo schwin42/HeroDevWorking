@@ -11,19 +11,22 @@ public class GravityGun : PlayerTool
 	private bool _isAttracting = false;
 
 	[SerializeField] private Transform _sourcePoint;
-	[SerializeField] private GravityGunInfluence _influence;
-	[SerializeField] private GravityGunSource _source;
+	private GravityGunInfluence _influence;
+	private GravityGunSource _source;
 	
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		_influence = GetComponentInChildren<GravityGunInfluence>();
+		_source = GetComponentInChildren<GravityGunSource>();
+		_source.Initialize(this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (_isAttracting)
 		{
-			AttractVoxels();
+			_influence.AttractVoxels(_sourcePoint.position, attractionForce);
 		}
 	}
 
@@ -48,14 +51,5 @@ public class GravityGun : PlayerTool
 		_isAttracting = false;
 	}
 	
-	void AttractVoxels()
-	{
-		Debug.Log("attracting voxels");
-		foreach (Rigidbody rb in _influence.overlappingRigidbodies)
-		{
-			Debug.Log("attracting rigidbody: " + rb.name);
-			rb.AddForce((_sourcePoint.position - rb.position) * attractionForce);
-		}
-		
-	}
+
 }

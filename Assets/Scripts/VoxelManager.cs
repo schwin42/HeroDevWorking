@@ -12,7 +12,17 @@ public class VoxelManager : MonoBehaviour
 	public Rigidbody Rigidbody;
 	
 	//State
-	public Owner owner { get; set; } //Owner here means the whole of which the voxel is a part
+	public Owner owner
+	{
+		get { return _owner; } set
+		{
+			_owner = value;
+		}
+	} //Owner here means the whole of which the voxel is a part
+
+	private Owner _owner;
+	
+	
 	private bool _isInitialized = false;
 
 	public void Initialize(Enemy owner)

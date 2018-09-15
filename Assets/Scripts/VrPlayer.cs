@@ -26,12 +26,12 @@ public class VrPlayer : MonoBehaviour
 	int activeToolsetIndex = 0;
 
 	//Bookkeeping
-	public static HeadManager Head {
+	public HeadManager head {
 		get {
 			return _head;
 		}
 	}
-	private static HeadManager _head;
+	private HeadManager _head;
 	
 	// Use this for initialization
 	void Start()

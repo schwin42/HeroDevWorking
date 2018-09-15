@@ -9,7 +9,7 @@ public class GravityGunSource : Owner {
 
 	public override void HandleConstituentCollisionEnter(Collision hit)
 	{
-		if (hit.gameObject.layer == SceneManager.Instance.playerToolLayer) return;
+		if (hit.gameObject.layer == SceneManager.Instance.playerToolLayer || hit.gameObject.layer == SceneManager.Instance.playerProjectileLayer) return;
 		Debug.Log("constituent trigger: " + LayerMask.LayerToName( hit.gameObject.layer));
 		Collect(hit.collider);
 	}
@@ -46,11 +46,11 @@ public class GravityGunSource : Owner {
 	private void Collect(Collider other)
 	{
 		VoxelManager voxel = other.GetComponent<VoxelManager>(); //TODO Replace voxel GetComponents with voxel registry
-		Debug.Log("voxel: " + (voxel == null ? "null" : "thing"));
 		voxel.Rigidbody.isKinematic = true;
 //		voxel.Rigidbody.velocity = Vector3.zero;
 		voxel.transform.SetParent(_gun.transform, true);
 		voxel.owner = this;
+		voxel.gameObject.layer = SceneManager.Instance.playerProjectileLayer;
 		_collectedVoxels.Add(voxel);
 	}
 }

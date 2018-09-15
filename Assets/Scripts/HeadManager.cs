@@ -10,24 +10,4 @@ public class HeadManager : MonoBehaviour
 	{
 		_player = player;
 	}
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	private void OnCollisionEnter(Collision other)
-	{
-		if (other.collider.CompareTag("Projectile"))
-		{
-			_player.TakeDamage(other.collider.GetComponent<Projectile>());
-		}
-
-		Destroy(other.gameObject);
-	}
 }

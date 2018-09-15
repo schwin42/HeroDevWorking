@@ -22,11 +22,12 @@ public class Enemy : Owner
 	
 	//Character stats
 	public float movementSpeed = 10;
+	public bool canFire = false;
 	public float chargeTime = 2f;
 	public float shotDamage = 1;
 	public float maxHealth = 10;
 	public float firingRange = 1.5f;
-	public float pulseVelocity = 0.1f;
+	public float pulseSpeed = 0.1f;
 	
 	//Technical config
 	private const float EXPLOSION_FORCE = 1000f;
@@ -53,7 +54,7 @@ public class Enemy : Owner
 	private AudioSource _audioSource;
 	
 	// Use this for initialization
-	void Start ()
+	private void Start ()
 	{
 		body = GetComponentsInChildren<VoxelManager>();
 		foreach (VoxelManager voxel in body)
@@ -78,7 +79,7 @@ public class Enemy : Owner
 		//Move according to state
 		
 		//Make firing progress
-		if (_firingDirective == AiFiringDirective.Charging)
+		if (canFire && _firingDirective == AiFiringDirective.Charging)
 		{
 			_chargeTimer += Time.deltaTime;
 			if (_chargeTimer >= chargeTime)
@@ -107,12 +108,18 @@ public class Enemy : Owner
 		_audioSource.Play();
 		VoxelManager pulse = Instantiate(_projectilePrefab, transform.position, transform.rotation) as VoxelManager;
 		pulse.Initialize(this);
-		pulse.Rigidbody.velocity = (VrPlayer.Head.transform.position - transform.position) * pulseVelocity;
+		Debug.Log("rigidbody: " + (pulse.Rigidbody == null ? " null" :  "thing"));
+		Debug.Log("head position: " + SceneManager.Instance.player.head.transform.position);
+		
+		Vector3 velocity = (SceneManager.Instance.player.head.transform.position - transform.position) * pulseSpeed;
+		Debug.Log("velocity" + velocity);
+		pulse.Rigidbody.velocity = velocity;
+
 	}
 	
 	private void Explode()
 	{
-		Debug.Log("kilt");
+		Debug.Log("kilt: " + gameObject.name);
 		explosion.gameObject.SetActive(true);
 /*		ParticleSystem.EmissionModule emission = explosion.emission;
 		emission.enabled = true;*/
@@ -126,7 +133,7 @@ public class Enemy : Owner
 		}
 
 		_isAlive = false;
-		_coreLight.gameObject.SetActive(false);
+		if(_coreLight != null) _coreLight.gameObject.SetActive(false);
 //		StartCoroutine(CleanUp());
 	}
 

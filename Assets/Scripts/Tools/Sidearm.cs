@@ -27,18 +27,19 @@ public class Sidearm : PlayerTool
 		device.TriggerHapticPulse(HAPTIC_FORCE);
 
 		RaycastHit hit;
+		Debug.DrawRay(bulletOrigin.position, bulletOrigin.forward, Color.cyan, 3f);
 		if (Physics.Raycast(bulletOrigin.position, bulletOrigin.forward, out hit, RANGE))
 		{
-			if (hit.collider.tag != "Enemy")
+			if (hit.collider.gameObject.layer != SceneManager.Instance.enemyLayer)
 			{
 				Debug.Log("hit non-enemy: " + hit.collider.gameObject.name);
 				return;
 			}
 			Debug.Log("hit enemy: " + hit.collider.gameObject.name);
 			VoxelManager voxel = hit.collider.GetComponent<VoxelManager>();
-			voxel.TakeDamage(DAMAGE, bulletOrigin, BLAST_FORCE);}
-		else
-		{
+			voxel.TakeDamage(DAMAGE, bulletOrigin, BLAST_FORCE);
+			
+		} else {
 			Debug.Log("miss");
 		}
 	}

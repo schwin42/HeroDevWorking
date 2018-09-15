@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Pickup
   - Yolk
-  - Projectile
-  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,8 +19,8 @@ TagManager:
   - EnemyProjectile
   - Geometry
   - PlayerTool
-  - 
-  - 
+  - PlayerHurt
+  - PlayerProjectile
   - 
   - 
   - 

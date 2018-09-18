@@ -2,14 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//public enum PlayerToolType
-//{
-//	Sidearm = 0,
-//	Slingshot = 1,
-//	Shield = 2,
-//	Rifle = 3,
-//}
-
 public class VrPlayer : MonoBehaviour
 {
 	//Character config

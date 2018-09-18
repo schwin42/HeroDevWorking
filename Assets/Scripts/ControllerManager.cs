@@ -17,13 +17,6 @@ public class ControllerManager : MonoBehaviour {
     //State
     bool isAiming = false;
     Rigidbody aimingProjectile = null;
-    
-	// Use this for initialization
-	void Start () {
-
-
-
-    }
 
     // Update is called once per frame
     void Update () {

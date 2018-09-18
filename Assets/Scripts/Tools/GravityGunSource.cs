@@ -26,7 +26,6 @@ public class GravityGunSource : Owner {
 		Debug.Log("source trigger");
 		//TODO Restrict relevant collisions to loose voxels
 		Collect(other);
-
 	}
 
 	public void PropelVoxels(float force)

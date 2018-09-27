@@ -40,6 +40,9 @@ public class SceneManager : MonoBehaviour
 	public int playerHurtLayer { get { return _playerHurtLayer; } }
 	private int _playerHurtLayer = -1;
 	
+	public int playerShipLayer { get { return _playerShipLayer; } }
+	private int _playerShipLayer = -1;
+	
 	public int enemyProjectileLayer { get { return _enemyProjectileLayer; } }
 	private int _enemyProjectileLayer = -1;
 	
@@ -66,6 +69,7 @@ public class SceneManager : MonoBehaviour
 		_instance._playerToolLayer = LayerMask.NameToLayer("PlayerTool");
 		_instance._playerProjectileLayer = LayerMask.NameToLayer("PlayerProjectile");
 		_instance._playerHurtLayer = LayerMask.NameToLayer("PlayerHurt");
+		_instance._playerShipLayer = LayerMask.NameToLayer("PlayerShip");
 		_instance._enemyProjectileLayer = LayerMask.NameToLayer("EnemyProjectile");
 		_instance._enemyLayer = LayerMask.NameToLayer("Enemy");
 
